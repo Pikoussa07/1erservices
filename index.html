@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1erservices - Agence de Marketing Digital</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Préchargeur -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="loader-text">1erservices</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Curseur personnalisé -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- En-tête -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo" data-aos="fade-right">
+          <span class="logo-text">1er<span class="text-accent">services</span></span>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#a-propos" class="nav-link">À Propos</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-rounded">Démarrer un projet</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section Héro -->
+    <section id="accueil" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">Propulsez votre <span class="text-gradient">présence digitale</span></h1>
+            <p class="hero-description">
+              Nous aidons les entreprises, écoles et organisations à augmenter leur visibilité en ligne, 
+              générer plus de revenus et construire une présence web impactante.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary btn-lg btn-rounded">
+                Commencer maintenant
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#services" class="btn btn-outline btn-lg btn-rounded">Nos services</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-value"><span class="counter" data-count="150">0</span>+</div>
+                <div class="stat-label">Clients satisfaits</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value"><span class="counter" data-count="200">0</span>+</div>
+                <div class="stat-label">Projets réalisés</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value"><span class="counter" data-count="8">0</span>+</div>
+                <div class="stat-label">Années d'expérience</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200">
+            <div class="hero-image">
+              <img src="https://placehold.co/600x500/5271ff/ffffff?text=1erservices" alt="Marketing Digital" class="img-fluid">
+            </div>
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="floating-card card-1">
+              <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="card-content">
+                <div class="card-title">+120%</div>
+                <div class="card-subtitle">Croissance</div>
+              </div>
+            </div>
+            <div class="floating-card card-2">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <div class="card-content">
+                <div class="card-title">+5K</div>
+                <div class="card-subtitle">Nouveaux abonnés</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <!-- Section Clients -->
+    <section class="clients">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="clients-title">Ils nous font confiance</h2>
+        </div>
+        <div class="clients-slider">
+          <div class="clients-track">
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+1" alt="Client 1"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+2" alt="Client 2"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+3" alt="Client 3"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+4" alt="Client 4"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+5" alt="Client 5"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+6" alt="Client 6"></div>
+            
+            <!-- Duplicate for infinite scroll effect -->
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+1" alt="Client 1"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+2" alt="Client 2"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+3" alt="Client 3"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+4" alt="Client 4"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+5" alt="Client 5"></div>
+            <div class="client-logo"><img src="https://placehold.co/200x80/5271ff/ffffff?text=Client+6" alt="Client 6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Nos Services</span>
+          <h2 class="section-title">Solutions digitales complètes</h2>
+          <p class="section-description">
+            Des solutions numériques complètes pour aider votre entreprise à prospérer dans le monde digital
+          </p>
+        </div>
+        <div class="services-grid">
+          <!-- Marketing Digital -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3 class="service-title">Marketing Digital</h3>
+            <p class="service-description">
+              Stratégies de marketing digital complètes pour augmenter votre visibilité et générer des leads qualifiés.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Stratégie marketing</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Publicité en ligne</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Analyse et rapports</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Gestion des Réseaux Sociaux -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3 class="service-title">Gestion Réseaux Sociaux</h3>
+            <p class="service-description">
+              Gestion professionnelle de vos comptes sociaux pour développer votre communauté et votre marque.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Création de contenu</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Gestion de communauté</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Publicités ciblées</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Création de Sites Web -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="service-title">Création de Sites Web</h3>
+            <p class="service-description">
+              Sites web modernes, responsifs et optimisés pour convertir vos visiteurs en clients.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Design sur mesure</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Optimisation SEO</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Expérience utilisateur</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- SEO -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="service-title">Référencement SEO</h3>
+            <p class="service-description">
+              Optimisation pour les moteurs de recherche pour améliorer votre visibilité et attirer du trafic organique.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Audit SEO</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Optimisation on-page</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Création de backlinks</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Production Vidéo & Photo -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-camera"></i>
+            </div>
+            <h3 class="service-title">Production Vidéo & Photo</h3>
+            <p class="service-description">
+              Contenu visuel professionnel pour renforcer votre image de marque et engager votre audience.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Photographie professionnelle</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Vidéos promotionnelles</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Montage et post-production</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- E-commerce -->
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="service-title">Solutions E-commerce</h3>
+            <p class="service-description">
+              Boutiques en ligne performantes pour vendre vos produits et services sur internet.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check-circle"></i> <span>Création de boutique</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Optimisation des conversions</span></li>
+              <li><i class="fas fa-check-circle"></i> <span>Intégration de paiement</span></li>
+            </ul>
+            <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="services-bg"></div>
+    </section>
+
+    <!-- Section Comment ça marche -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Notre Processus</span>
+          <h2 class="section-title">Comment nous travaillons</h2>
+          <p class="section-description">
+            Un processus simple et efficace pour transformer votre présence digitale
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Consultation</h3>
+              <p class="step-description">
+                Nous commençons par comprendre vos objectifs, votre marché et vos défis spécifiques.
+              </p>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Stratégie</h3>
+              <p class="step-description">
+                Nous élaborons une stratégie personnalisée adaptée à vos besoins et objectifs.
+              </p>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Exécution</h3>
+              <p class="step-description">
+                Notre équipe met en œuvre la stratégie avec précision et créativité.
+              </p>
+            </div>
+          </div>
+          <div class="process-connector"></div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3 class="step-title">Analyse</h3>
+              <p class="step-description">
+                Nous mesurons les résultats et optimisons continuellement pour maximiser votre ROI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="a-propos" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-container" data-aos="fade-right">
+            <div class="about-image">
+              <img src="https://placehold.co/600x500/5271ff/ffffff?text=Notre+Équipe" alt="Notre Équipe" class="img-fluid">
+            </div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+          </div>
+          <div class="about-content" data-aos="fade-left">
+            <span class="section-subtitle">À Propos de Nous</span>
+            <h2 class="about-title">Votre partenaire pour l'excellence digitale</h2>
+            <p class="about-description">
+              1erservices est une agence de marketing digital complète basée au Maroc. Nous sommes passionnés par 
+              l'aide aux entreprises, écoles et organisations pour développer leur présence en ligne et atteindre 
+              leurs objectifs commerciaux.
+            </p>
+            <div class="about-features">
+              <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Équipe Expérimentée</h3>
+                  <p class="feature-description">
+                    Notre équipe apporte des années d'expérience et des compétences spécialisées.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Approche Axée sur les Résultats</h3>
+                  <p class="feature-description">
+                    Nous nous concentrons sur la livraison de résultats mesurables qui impactent votre activité.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Solutions Sur Mesure</h3>
+                  <p class="feature-description">
+                    Nous créons des stratégies personnalisées alignées avec vos objectifs spécifiques.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                <div class="feature-content">
+                  <h3 class="feature-title">Communication Transparente</h3>
+                  <p class="feature-description">
+                    Nous maintenons une communication claire et ouverte tout au long de notre partenariat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-lg btn-rounded">Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Notre Travail</span>
+          <h2 class="section-title">Projets récents</h2>
+          <p class="section-description">
+            Découvrez quelques-uns de nos projets récents et les résultats que nous avons obtenus
+          </p>
+        </div>
+        <div class="portfolio-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="web">Sites Web</button>
+          <button class="filter-btn" data-filter="social">Réseaux Sociaux</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="video">Vidéo & Photo</button>
+        </div>
+        <div class="portfolio-grid" data-aos="fade-up">
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Web" alt="Projet Web" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Site E-commerce</h3>
+                <p class="portfolio-category">Développement Web</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="social">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Social" alt="Projet Social Media" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Campagne Instagram</h3>
+                <p class="portfolio-category">Réseaux Sociaux</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="branding">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Branding" alt="Projet Branding" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Refonte de Marque</h3>
+                <p class="portfolio-category">Branding</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="video">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Vidéo" alt="Projet Vidéo" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Vidéo Promotionnelle</h3>
+                <p class="portfolio-category">Production Vidéo</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Web+2" alt="Projet Web" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Site Vitrine</h3>
+                <p class="portfolio-category">Développement Web</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="social">
+            <div class="portfolio-image">
+              <img src="https://placehold.co/600x400/5271ff/ffffff?text=Projet+Social+2" alt="Projet Social Media" class="img-fluid">
+            </div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-content">
+                <h3 class="portfolio-title">Stratégie Facebook</h3>
+                <p class="portfolio-category">Réseaux Sociaux</p>
+                <a href="#" class="portfolio-link">Voir le projet</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="temoignages" class="testimonials">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Témoignages</span>
+          <h2 class="section-title">Ce que disent nos clients</h2>
+          <p class="section-description">
+            Ne vous fiez pas seulement à notre parole - écoutez ce que disent nos clients satisfaits
+          </p>
+        </div>
+        <div class="testimonial-slider" data-aos="fade-up">
+          <div class="testimonial-track">
+            <!-- Témoignage 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "1erservices a complètement transformé notre présence en ligne. Leur équipe a livré un site web 
+                  magnifique et mis en œuvre une stratégie SEO qui a doublé notre trafic organique en seulement 3 mois."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  <img src="https://placehold.co/100x100/5271ff/ffffff?text=Client" alt="Client" class="img-fluid">
+                </div>
+                <div class="author-info">
+                  <h3 class="author-name">Sarah Bennani</h3>
+                  <p class="author-title">PDG, TechStart Inc.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Travailler avec 1erservices a été un changement de jeu pour notre entreprise. Leurs campagnes sur 
+                  les réseaux sociaux ont augmenté notre engagement de 300% et ont directement contribué à une 
+                  augmentation significative des ventes."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  <img src="https://placehold.co/100x100/5271ff/ffffff?text=Client" alt="Client" class="img-fluid">
+                </div>
+                <div class="author-info">
+                  <h3 class="author-name">Mohammed Alaoui</h3>
+                  <p class="author-title">Directeur Marketing, Retail Solutions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "L'équipe de 1erservices a créé pour notre école une stratégie digitale complète qui a augmenté 
+                  nos inscriptions de 45%. Leur approche professionnelle et leur expertise ont dépassé toutes nos attentes."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  <img src="https://placehold.co/100x100/5271ff/ffffff?text=Client" alt="Client" class="img-fluid">
+                </div>
+                <div class="author-info">
+                  <h3 class="author-name">Fatima Zahra</h3>
+                  <p class="author-title">Directrice, École Internationale</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Témoignage 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Leur expertise en marketing digital nous a aidés à atteindre de nouveaux publics que nous n'aurions 
+                  jamais cru possibles. Le ROI de nos campagnes a été exceptionnel."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">
+                  <img src="https://placehold.co/100x100/5271ff/ffffff?text=Client" alt="Client" class="img-fluid">
+                </div>
+                <div class="author-info">
+                  <h3 class="author-name">David Amrani</h3>
+                  <p class="author-title">COO, Global Innovations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-prev" aria-label="Témoignage précédent"><i class="fas fa-arrow-left"></i></button>
+          <button class="testimonial-next" aria-label="Témoignage suivant"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content" data-aos="fade-up">
+          <h2 class="cta-title">Prêt à développer votre entreprise?</h2>
+          <p class="cta-description">
+            Discutons de la façon dont nos services de marketing digital peuvent vous aider à atteindre vos objectifs.
+          </p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-light btn-lg btn-rounded">Planifier un appel</a>
+            <a href="#services" class="btn btn-outline-light btn-lg btn-rounded">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-bg"></div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Contactez-nous</span>
+          <h2 class="section-title">Parlons de votre projet</h2>
+          <p class="section-description">
+            Vous avez un projet en tête ou vous souhaitez en savoir plus sur nos services? Contactez-nous dès aujourd'hui.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-phone"></i></div>
+                <div class="method-content">
+                  <h3 class="method-title">Appelez-nous</h3>
+                  <p class="method-value">+212 660 77 88 03</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                <div class="method-content">
+                  <h3 class="method-title">Écrivez-nous</h3>
+                  <p class="method-value">1erservices07@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="method-content">
+                  <h3 class="method-title">Visitez-nous</h3>
+                  <p class="method-value">Maarif, Casablanca, Maroc</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <h3 class="social-title">Suivez-nous</h3>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container" data-aos="fade-left">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" placeholder="Sujet" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-rounded">
+                <span>Envoyer le message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <div class="logo">
+              <span class="logo-text">1er<span class="text-accent">services</span></span>
+            </div>
+            <p class="footer-description">
+              Votre partenaire pour la croissance digitale et le succès en ligne. Nous aidons les entreprises à prospérer dans le monde numérique.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-menu">
+              <li><a href="#services">Marketing Digital</a></li>
+              <li><a href="#services">Réseaux Sociaux</a></li>
+              <li><a href="#services">Création de Sites Web</a></li>
+              <li><a href="#services">Référencement SEO</a></li>
+              <li><a href="#services">Production Vidéo & Photo</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3 class="footer-title">Newsletter</h3>
+            <p class="footer-description">
+              Abonnez-vous à notre newsletter pour recevoir les dernières actualités et conseils.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit" class="btn btn-primary btn-block btn-rounded">S'abonner</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; <span id="currentYear"></span> 1erservices. Tous droits réservés.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Mentions légales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-shape"></div>
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
