@@ -523,17 +523,55 @@ body.dark-mode .header {
   position: relative;
 }
 
-.hero-image {
+.modern-hero-visual {
   position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transition: transform 0.5s ease;
-  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.hero-image:hover {
-  transform: translateY(-10px);
+.glow-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: morph-sphere 8s ease-in-out infinite alternate;
+}
+.sphere-primary {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+  opacity: 0.6;
+  top: 10%;
+  right: 10%;
+}
+.sphere-accent {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg, var(--accent), #ff9b9b);
+  opacity: 0.5;
+  bottom: 10%;
+  left: 10%;
+  animation-delay: -4s;
+}
+@keyframes morph-sphere {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.2) translate(-20px, 20px); }
+}
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  max-width: 300px;
+  text-align: center;
+}
+body.dark-mode .hero-glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  border-color: rgba(255, 255, 255, 0.05);
 }
 
 .shape {
@@ -573,7 +611,6 @@ body.dark-mode .header {
 body.dark-mode .floating-card { background-color: var(--secondary); }
 
 .card-1 { top: 10%; right: -30px; animation: float 8s ease-in-out infinite; }
-.card-2 { bottom: 10%; left: -30px; animation: float 10s ease-in-out infinite 1s; }
 
 .card-icon {
   display: flex;
@@ -793,77 +830,56 @@ body.dark-mode .service-card {
   margin-left: calc(1.5rem + 2px);
 }
 
-.about-grid {
+.about-modern-grid {
   display: grid;
-  gap: 4rem;
-  align-items: center;
-}
-
-.about-image-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   position: relative;
+  z-index: 2;
 }
 
-.about-image {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transition: transform 0.5s ease;
-}
-
-.about-image:hover {
-  transform: scale(1.03);
-}
-
-.about-title {
-  font-size: 2.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.about-description {
-  font-size: 1.125rem;
-  color: var(--muted-foreground);
-  margin-bottom: 2rem;
-}
-
-.about-features {
-  display: grid;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.feature-item {
+.about-modern-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.feature-icon {
+body.dark-mode .about-modern-card {
+  background: var(--secondary);
+}
+
+.about-modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.about-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(82, 113, 255, 0.1);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 8px;
-  background-color: rgba(82, 113, 255, 0.1);
-  color: var(--primary);
-  flex-shrink: 0;
-  transition: var(--transition);
+  font-size: 1.5rem;
 }
 
-.feature-item:hover .feature-icon {
-  background-color: var(--primary);
-  color: white;
-  transform: rotate(360deg);
-}
-
-.feature-title {
+.about-card-title {
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
 }
 
-.feature-description {
+.about-card-text {
+  font-size: 0.95rem;
   color: var(--muted-foreground);
-  font-size: 0.875rem;
 }
 
 .cta {
@@ -1005,37 +1021,49 @@ body.dark-mode .contact-form-container {
 
 .form-row {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
+.modern-input {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background-color: var(--background);
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  background-color: var(--muted);
   color: var(--foreground);
-  font-size: 0.875rem;
-  transition: var(--transition);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+body.dark-mode .modern-input {
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.modern-input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(82, 113, 255, 0.2);
+  background-color: var(--background);
+  box-shadow: 0 0 0 4px rgba(82, 113, 255, 0.15);
+}
+
+select.modern-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+body.dark-mode select.modern-input {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
 .footer {
@@ -1169,7 +1197,37 @@ body.dark-mode .footer {
   transform: translateY(-5px);
 }
 
-/* Modal Styles */
+.wa-float {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: var(--transition);
+  animation: pulse-wa 2s infinite;
+}
+
+.wa-float:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-color: #1ebd57;
+  color: white;
+}
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1236,7 +1294,6 @@ body.dark-mode .modal-content {
   color: var(--foreground);
 }
 
-/* Responsive Styles */
 @media (min-width: 640px) {
   .hero-buttons {
     flex-direction: row;
@@ -1283,9 +1340,6 @@ body.dark-mode .modal-content {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
-  }
   .footer-grid {
     grid-template-columns: 1.5fr 1fr 1.5fr;
   }
@@ -1301,7 +1355,6 @@ body.dark-mode .modal-content {
   .step-number { font-size: 2.5rem; }
   .process-step { flex-direction: column; align-items: center; text-align: center; }
   .process-connector { display: none; }
-  .about-features { grid-template-columns: 1fr; }
   .contact-method { flex-direction: column; align-items: center; text-align: center; }
   .social-links { justify-content: center; }
   .footer-grid { grid-template-columns: 1fr; text-align: center; }
@@ -1345,6 +1398,11 @@ body.dark-mode .mobile-menu {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <a href="https://wa.me/212607040422" class="wa-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <div class="preloader">
     <div class="loader">
       <span class="loader-text">1erservices</span>
@@ -1401,24 +1459,18 @@ body.dark-mode .mobile-menu {
               </button>
               <a href="#services" class="btn btn-outline btn-lg btn-rounded">Nos services</a>
             </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-value"><span class="counter" data-count="150">0</span>+</div>
-                <div class="stat-label">Clients satisfaits</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value"><span class="counter" data-count="200">0</span>+</div>
-                <div class="stat-label">Projets réalisés</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value"><span class="counter" data-count="8">0</span>+</div>
-                <div class="stat-label">Années d'expérience</div>
-              </div>
-            </div>
           </div>
           <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200">
-            <div class="hero-image">
-              <img src="https://placehold.co/600x500/5271ff/ffffff?text=1erservices" alt="Marketing Digital" class="img-fluid">
+            <div class="modern-hero-visual">
+              <div class="glow-sphere sphere-primary"></div>
+              <div class="glow-sphere sphere-accent"></div>
+              <div class="hero-glass-card">
+                <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h3 style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Agence Digitale Nouvelle Génération</h3>
+                <p style="font-size: 0.875rem; color: var(--muted-foreground);">Des stratégies modernes pour des résultats concrets.</p>
+              </div>
             </div>
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
@@ -1428,13 +1480,6 @@ body.dark-mode .mobile-menu {
               <div class="card-content">
                 <div class="card-title">+120%</div>
                 <div class="card-subtitle">Croissance</div>
-              </div>
-            </div>
-            <div class="floating-card card-2">
-              <div class="card-icon"><i class="fas fa-users"></i></div>
-              <div class="card-content">
-                <div class="card-title">+5K</div>
-                <div class="card-subtitle">Nouveaux abonnés</div>
               </div>
             </div>
           </div>
@@ -1608,61 +1653,33 @@ body.dark-mode .mobile-menu {
 
     <section id="a-propos" class="about">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-image-container" data-aos="fade-right">
-            <div class="about-image">
-              <img src="https://placehold.co/600x500/5271ff/ffffff?text=Notre+Équipe" alt="Notre Équipe" class="img-fluid">
-            </div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Pourquoi nous choisir</span>
+          <h2 class="section-title">Une agence dynamique à votre écoute</h2>
+          <p class="section-description">
+            1erservices vous accompagne avec une approche moderne, réactive et totalement transparente pour propulser votre activité.
+          </p>
+        </div>
+        <div class="about-modern-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-modern-card">
+            <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="about-card-title">Notre méthode</div>
+            <div class="about-card-text">Une approche ciblée et data-driven pour garantir un retour sur investissement optimal.</div>
           </div>
-          <div class="about-content" data-aos="fade-left">
-            <span class="section-subtitle">À Propos de Nous</span>
-            <h2 class="about-title">Votre partenaire pour l'excellence digitale</h2>
-            <p class="about-description">
-              1erservices est une agence de marketing digital complète basée au Maroc. Nous sommes passionnés par 
-              l'aide aux entreprises, écoles et organisations pour développer leur présence en ligne et atteindre 
-              leurs objectifs commerciaux.
-            </p>
-            <div class="about-features">
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="feature-icon"><i class="fas fa-users"></i></div>
-                <div class="feature-content">
-                  <h3 class="feature-title">Équipe Expérimentée</h3>
-                  <p class="feature-description">
-                    Notre équipe apporte des années d'expérience et des compétences spécialisées.
-                  </p>
-                </div>
-              </div>
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="feature-content">
-                  <h3 class="feature-title">Approche Axée sur les Résultats</h3>
-                  <p class="feature-description">
-                    Nous nous concentrons sur la livraison de résultats mesurables qui impactent votre activité.
-                  </p>
-                </div>
-              </div>
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
-                <div class="feature-content">
-                  <h3 class="feature-title">Solutions Sur Mesure</h3>
-                  <p class="feature-description">
-                    Nous créons des stratégies personnalisées alignées avec vos objectifs spécifiques.
-                  </p>
-                </div>
-              </div>
-              <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="feature-icon"><i class="fas fa-comments"></i></div>
-                <div class="feature-content">
-                  <h3 class="feature-title">Communication Transparente</h3>
-                  <p class="feature-description">
-                    Nous maintenons une communication claire et ouverte tout au long de notre partenariat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a href="#contact" class="btn btn-primary btn-lg btn-rounded">Contactez-nous</a>
+          <div class="about-modern-card">
+            <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
+            <div class="about-card-title">Accompagnement personnalisé</div>
+            <div class="about-card-text">Nous avançons main dans la main avec vous à chaque étape de votre croissance.</div>
+          </div>
+          <div class="about-modern-card">
+            <div class="about-card-icon"><i class="fas fa-bolt"></i></div>
+            <div class="about-card-title">Réactivité & Agilité</div>
+            <div class="about-card-text">Une équipe dynamique prête à s'adapter rapidement aux évolutions de votre marché.</div>
+          </div>
+          <div class="about-modern-card">
+            <div class="about-card-icon"><i class="fas fa-star"></i></div>
+            <div class="about-card-title">Nos engagements</div>
+            <div class="about-card-text">Transparence totale, qualité premium et orientation résultats dans tout ce que nous entreprenons.</div>
           </div>
         </div>
       </div>
@@ -1735,26 +1752,36 @@ body.dark-mode .mobile-menu {
           <div class="contact-form-container" data-aos="fade-left">
             <form class="contact-form" id="contactForm">
               <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Nom</label>
-                  <input type="text" id="name" placeholder="Votre nom" required>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="name" class="sr-only">Nom</label>
+                  <input type="text" id="name" class="modern-input" placeholder="Votre nom complet" required>
                 </div>
-                <div class="form-group">
-                  <label for="phone">Téléphone</label>
-                  <input type="tel" id="phone" placeholder="Votre téléphone" required>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="phone" class="sr-only">Téléphone</label>
+                  <input type="tel" id="phone" class="modern-input" placeholder="Votre téléphone" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="subject">Sujet</label>
-                <input type="text" id="subject" placeholder="Sujet" required>
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="domaine" class="sr-only">Domaine</label>
+                  <input type="text" id="domaine" class="modern-input" placeholder="Votre domaine d'activité" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="service" class="sr-only">Service</label>
+                  <select id="service" class="modern-input" required>
+                    <option value="" disabled selected>Sélectionnez un service</option>
+                    <option value="Marketing Digital">Marketing Digital</option>
+                    <option value="Gestion Réseaux Sociaux">Gestion Réseaux Sociaux</option>
+                    <option value="Création de Sites Web">Création de Sites Web</option>
+                    <option value="Référencement SEO">Référencement SEO</option>
+                    <option value="Production Vidéo & Photo">Production Vidéo & Photo</option>
+                    <option value="Solutions E-commerce">Solutions E-commerce</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block btn-rounded">
-                <span>Envoyer</span>
-                <i class="fab fa-whatsapp"></i>
+              <button type="submit" class="btn btn-primary btn-block btn-rounded" style="padding: 1rem; font-size: 1.1rem; margin-top: 1rem;">
+                <span>Envoyer sur WhatsApp</span>
+                <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i>
               </button>
             </form>
           </div>
@@ -1890,7 +1917,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cursorFollower.classList.remove('active');
   });
   
-  const links = document.querySelectorAll('a, button, .service-card');
+  const links = document.querySelectorAll('a, button, .service-card, .about-modern-card');
   links.forEach(link => {
     link.addEventListener('mouseenter', function() {
       cursor.classList.add('active');
@@ -2018,10 +2045,10 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const name = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
+      const domaine = document.getElementById('domaine').value;
+      const service = document.getElementById('service').value;
       
-      const msg = `*Nouveau Message (Contact)*\n\n*Nom:* ${name}\n*Téléphone:* ${phone}\n*Sujet:* ${subject}\n\n*Message:*\n${message}`;
+      const msg = `*Nouvelle Demande (1erservices)*\n\n*Nom:* ${name}\n*Téléphone:* ${phone}\n*Domaine:* ${domaine}\n*Service:* ${service}`;
       window.open('https://wa.me/212607040422?text=' + encodeURIComponent(msg), '_blank');
     });
   }
@@ -2084,16 +2111,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 5000);
     });
   }
-
-  const serviceCards = document.querySelectorAll('.service-card');
-  serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-10px)';
-    });
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0)';
-    });
-  });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
